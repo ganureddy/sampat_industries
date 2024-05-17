@@ -1,0 +1,141 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-16 20:18:16.381641",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_yemp",
+  "work_order",
+  "bom",
+  "sales_order",
+  "customer",
+  "amended_from",
+  "column_break_xdnj",
+  "posting_date",
+  "item",
+  "item_name",
+  "work_order_quantity",
+  "company",
+  "section_break_poke",
+  "daily_production"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_yemp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Daily Production Summary",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "label": "Work Order",
+   "options": "Work Order"
+  },
+  {
+   "fieldname": "column_break_xdnj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "work_order.production_item",
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fetch_from": "item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  },
+  {
+   "fetch_from": "work_order.bom_no",
+   "fieldname": "bom",
+   "fieldtype": "Link",
+   "label": "BOM",
+   "options": "BOM"
+  },
+  {
+   "fetch_from": "work_order.sales_order",
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "fetch_from": "work_order.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_poke",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "daily_production",
+   "fieldtype": "Table",
+   "label": "Daily Production ",
+   "options": "Daily Production Work"
+  },
+  {
+   "fetch_from": "work_order.qty",
+   "fieldname": "work_order_quantity",
+   "fieldtype": "Float",
+   "label": "Work Order quantity"
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "options": "Today"
+  },
+  {
+   "fetch_from": "sales_order.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-17 11:46:31.709861",
+ "modified_by": "Administrator",
+ "module": "Sampat Industries",
+ "name": "Daily Production Summary",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-11 00:31:18.177994",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "applicable_from",
+  "column_break_ln2g7",
+  "increment_entry_date",
+  "section_break_p7lv3",
+  "employee_yearly_increment_table",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "applicable_from",
+   "fieldtype": "Date",
+   "label": "Applicable From"
+  },
+  {
+   "fieldname": "column_break_ln2g7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "increment_entry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Increment Entry Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_p7lv3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employee_yearly_increment_table",
+   "fieldtype": "Table",
+   "label": "Employee Yearly Increment Table",
+   "options": "Yearly Increment Table"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Yearly Increment Entry",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-11-11 00:32:58.464181",
+ "modified_by": "Administrator",
+ "module": "Sampat Industries",
+ "name": "Yearly Increment Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-05-16 20:30:23.859794",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "work_station",
+  "operation",
+  "machine",
+  "sart_time",
+  "end_time",
+  "column_break_mdrk",
+  "employee_name",
+  "actual_quantity",
+  "produced_quantity",
+  "machine_down_time"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mdrk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 2,
+   "fieldname": "work_station",
+   "fieldtype": "Link",
+   "label": "Work Station",
+   "options": "Workstation"
+  },
+  {
+   "columns": 2,
+   "fieldname": "operation",
+   "fieldtype": "Link",
+   "label": "Operation",
+   "options": "Operation"
+  },
+  {
+   "columns": 1,
+   "fieldname": "produced_quantity",
+   "fieldtype": "Float",
+   "label": "Produced Quantity"
+  },
+  {
+   "columns": 1,
+   "fieldname": "actual_quantity",
+   "fieldtype": "Float",
+   "label": "Actual Quantity"
+  },
+  {
+   "fieldname": "machine",
+   "fieldtype": "Link",
+   "label": "Machine",
+   "options": "Machine"
+  },
+  {
+   "fieldname": "machine_down_time",
+   "fieldtype": "Data",
+   "label": "Machine Down time "
+  },
+  {
+   "fieldname": "sart_time",
+   "fieldtype": "Time",
+   "label": "Sart Time"
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-05-17 11:41:51.041385",
+ "modified_by": "Administrator",
+ "module": "Sampat Industries",
+ "name": "Daily Production Work",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
