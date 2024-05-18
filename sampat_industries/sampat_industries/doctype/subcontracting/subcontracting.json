@@ -8,7 +8,6 @@
  "field_order": [
   "section_break_penp",
   "naming_series",
-  "purchase_order",
   "supplier",
   "supplier_name",
   "supplier_warehouse",
@@ -16,6 +15,7 @@
   "company",
   "date",
   "required_by",
+  "service_item",
   "amended_from",
   "address_and_contact_section",
   "supplier_address",
@@ -25,10 +25,13 @@
   "shipping_address_details",
   "section_break_nycv",
   "set_target_warehouse",
-  "item",
+  "subcontracted_item",
   "section_break_isob",
   "set_reserve_warehouse",
-  "supplied_items"
+  "get_materials_for_supplier",
+  "section_break_1mia",
+  "supplied_items",
+  "total_weight"
  ],
  "fields": [
   {
@@ -77,13 +80,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "purchase_order",
-   "fieldtype": "Link",
-   "label": "Subcontracting Purchase Order",
-   "options": "Purchase Order",
-   "reqd": 1
-  },
-  {
    "fetch_from": "purchase_order.supplier",
    "fieldname": "supplier",
    "fieldtype": "Link",
@@ -91,7 +87,7 @@
    "options": "Supplier"
   },
   {
-   "fetch_from": "purchase_order.supplier_name",
+   "fetch_from": "supplier.supplier_name",
    "fieldname": "supplier_name",
    "fieldtype": "Data",
    "label": "Supplier Name"
@@ -147,12 +143,6 @@
    "options": "Warehouse"
   },
   {
-   "fieldname": "item",
-   "fieldtype": "Table",
-   "label": "Item",
-   "options": "Subcontracting Order Item"
-  },
-  {
    "fieldname": "section_break_isob",
    "fieldtype": "Section Break",
    "label": "Raw Materials Supplied"
@@ -168,12 +158,38 @@
    "fieldtype": "Table",
    "label": "Supplied Items",
    "options": "Subcontracting Order Supplied Item"
+  },
+  {
+   "fieldname": "service_item",
+   "fieldtype": "Link",
+   "label": "Service Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "subcontracted_item",
+   "fieldtype": "Table",
+   "label": "Subcontracted Item",
+   "options": "Subcontract Item Table"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total weight"
+  },
+  {
+   "fieldname": "get_materials_for_supplier",
+   "fieldtype": "Button",
+   "label": "Get Materials For Supplier"
+  },
+  {
+   "fieldname": "section_break_1mia",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-17 15:24:51.023533",
+ "modified": "2024-05-18 18:33:24.477518",
  "modified_by": "Administrator",
  "module": "Sampat Industries",
  "name": "Subcontracting",
