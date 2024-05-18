@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-05-17 14:51:32.771899",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_penp",
+  "naming_series",
+  "purchase_order",
+  "supplier",
+  "supplier_name",
+  "supplier_warehouse",
+  "column_break_lkar",
+  "company",
+  "date",
+  "required_by",
+  "amended_from",
+  "address_and_contact_section",
+  "supplier_address",
+  "supplier_address_details",
+  "column_break_xujf",
+  "company_shipping_address",
+  "shipping_address_details",
+  "section_break_nycv",
+  "set_target_warehouse",
+  "item",
+  "section_break_isob",
+  "set_reserve_warehouse",
+  "supplied_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_penp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Subcontracting",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "SC-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_lkar",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "required_by",
+   "fieldtype": "Date",
+   "label": "Required By",
+   "reqd": 1
+  },
+  {
+   "fieldname": "purchase_order",
+   "fieldtype": "Link",
+   "label": "Subcontracting Purchase Order",
+   "options": "Purchase Order",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "purchase_order.supplier",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "purchase_order.supplier_name",
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name"
+  },
+  {
+   "fetch_from": "purchase_order.supplier_warehouse",
+   "fieldname": "supplier_warehouse",
+   "fieldtype": "Link",
+   "label": "Supplier Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "address_and_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Address and Contact"
+  },
+  {
+   "fetch_from": "supplier.supplier_primary_address",
+   "fieldname": "supplier_address",
+   "fieldtype": "Link",
+   "label": "Supplier Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "supplier_address_details",
+   "fieldtype": "Small Text",
+   "label": "Supplier Address Details"
+  },
+  {
+   "fieldname": "column_break_xujf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company_shipping_address",
+   "fieldtype": "Link",
+   "label": "Company Shipping Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "shipping_address_details",
+   "fieldtype": "Small Text",
+   "label": "Shipping Address Details"
+  },
+  {
+   "fieldname": "section_break_nycv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "purchase_order",
+   "fieldname": "set_target_warehouse",
+   "fieldtype": "Link",
+   "label": "Set Target Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "label": "Item",
+   "options": "Subcontracting Order Item"
+  },
+  {
+   "fieldname": "section_break_isob",
+   "fieldtype": "Section Break",
+   "label": "Raw Materials Supplied"
+  },
+  {
+   "fieldname": "set_reserve_warehouse",
+   "fieldtype": "Link",
+   "label": "Set Reserve Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "supplied_items",
+   "fieldtype": "Table",
+   "label": "Supplied Items",
+   "options": "Subcontracting Order Supplied Item"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-05-17 15:24:51.023533",
+ "modified_by": "Administrator",
+ "module": "Sampat Industries",
+ "name": "Subcontracting",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
