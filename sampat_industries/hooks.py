@@ -136,13 +136,19 @@ has_website_permission = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+    "Purchase Order":{
+        "on_submit":"sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.update_check_of_po_created"
+    },
+    "Stock Entry":{
+        "on_submit":"sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.update_check_of_stock_entry_created"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

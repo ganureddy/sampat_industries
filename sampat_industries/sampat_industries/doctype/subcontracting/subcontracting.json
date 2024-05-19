@@ -11,6 +11,9 @@
   "supplier",
   "supplier_name",
   "supplier_warehouse",
+  "po_created",
+  "stock_entry_created",
+  "material_returned",
   "column_break_lkar",
   "company",
   "date",
@@ -97,7 +100,8 @@
    "fieldname": "supplier_warehouse",
    "fieldtype": "Link",
    "label": "Supplier Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "reqd": 1
   },
   {
    "fieldname": "address_and_contact_section",
@@ -136,11 +140,11 @@
    "fieldtype": "Section Break"
   },
   {
-   "depends_on": "purchase_order",
    "fieldname": "set_target_warehouse",
    "fieldtype": "Link",
    "label": "Set Target Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "reqd": 1
   },
   {
    "fieldname": "section_break_isob",
@@ -151,7 +155,8 @@
    "fieldname": "set_reserve_warehouse",
    "fieldtype": "Link",
    "label": "Set Reserve Warehouse",
-   "options": "Warehouse"
+   "options": "Warehouse",
+   "reqd": 1
   },
   {
    "fieldname": "supplied_items",
@@ -163,7 +168,8 @@
    "fieldname": "service_item",
    "fieldtype": "Link",
    "label": "Service Item",
-   "options": "Item"
+   "options": "Item",
+   "reqd": 1
   },
   {
    "fieldname": "subcontracted_item",
@@ -184,12 +190,42 @@
   {
    "fieldname": "section_break_1mia",
    "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "po_created",
+   "fieldtype": "Check",
+   "label": "PO Created"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "stock_entry_created",
+   "fieldtype": "Check",
+   "label": "Stock Entry Created"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "material_returned",
+   "fieldtype": "Check",
+   "label": "Material Returned"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2024-05-18 18:33:24.477518",
+ "links": [
+  {
+   "link_doctype": "Purchase Order",
+   "link_fieldname": "custom_subcontracting_id"
+  },
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "custom_subcontracting_id"
+  }
+ ],
+ "modified": "2024-05-19 20:07:49.791530",
  "modified_by": "Administrator",
  "module": "Sampat Industries",
  "name": "Subcontracting",

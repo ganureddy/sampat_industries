@@ -5,14 +5,15 @@ frappe.ui.form.on("Subcontracting", {
 	refresh: function(frm) {
         console.log("Form Loaded");
         
-        if(frm.doc.docstatus==1){
+        if(frm.doc.docstatus==1 && frm.doc.stock_entry_created !== 1){
 
             frm.add_custom_button(__('Create Stock Entry'), function() {
                 frappe.call({
                     method: 'sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.create_stock_entry',
                     args: {
                         data: frm.doc,
-                        subcontracting_id:frm.doc.name
+                        subcontracting_id:frm.doc.name,
+                        purpose:"Send to Subcontractor"
                     },
                     callback: function (r) {
                         if (r.message) {
@@ -24,7 +25,7 @@ frappe.ui.form.on("Subcontracting", {
                 });
             }).addClass('btn-primary');
         }
-        if(frm.doc.docstatus==0){
+        if(frm.doc.docstatus==1 && frm.doc.po_created !== 1){
 
             frm.add_custom_button(__('Create Purchase Order'), function() {
                 frappe.call({
@@ -43,7 +44,26 @@ frappe.ui.form.on("Subcontracting", {
                 });
             }).addClass('btn-primary');
         }
-        
+        if(frm.doc.po_created == 1 && frm.doc.stock_entry_created ==1){
+
+            frm.add_custom_button(__('Create Material Return'), function() {
+                frappe.call({
+                    method: 'sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.create_stock_entry_as_return',
+                    args: {
+                        data: frm.doc,
+                        subcontracting_id:frm.doc.name,
+                        purpose:"Material Receipt"
+                    },
+                    callback: function (r) {
+                        if (r.message) {
+                            frappe.msgprint(__('Material Return successfully'));
+                        }else{
+                            frappe.msgprint(__('Material Return Fail'))
+                        }
+                    }
+                });
+            }).addClass('btn-primary');
+        }
     },
 
     get_materials_for_supplier :function(frm){
