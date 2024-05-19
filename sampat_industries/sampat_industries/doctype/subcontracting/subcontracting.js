@@ -4,11 +4,52 @@
 frappe.ui.form.on("Subcontracting", {
 	refresh: function(frm) {
         console.log("Form Loaded");
+        
+        if(frm.doc.docstatus==1){
+
+            frm.add_custom_button(__('Create Stock Entry'), function() {
+                frappe.call({
+                    method: 'sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.create_stock_entry',
+                    args: {
+                        data: frm.doc,
+                        subcontracting_id:frm.doc.name
+                    },
+                    callback: function (r) {
+                        if (r.message) {
+                            frappe.msgprint(__('Stock Entry successfully'));
+                        }else{
+                            frappe.msgprint(__('Stock Entry Fail'))
+                        }
+                    }
+                });
+            }).addClass('btn-primary');
+        }
+        if(frm.doc.docstatus==0){
+
+            frm.add_custom_button(__('Create Purchase Order'), function() {
+                frappe.call({
+                    method: 'sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.creating_purchase_order',
+                    args: {
+                        data: frm.doc,
+                        subcontracting_id:frm.doc.name
+                    },
+                    callback: function (r) {
+                        if (r.message) {
+                            frappe.msgprint(__('Purchase Order successfully'));
+                        }else{
+                            frappe.msgprint(__('Purchase Order Fail'))
+                        }
+                    }
+                });
+            }).addClass('btn-primary');
+        }
+        
     },
 
     get_materials_for_supplier :function(frm){
         fill_supplier_itmes_table(frm)
     }
+    
 
 });
 

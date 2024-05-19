@@ -235,5 +235,17 @@ has_website_permission = {
 # ]
 
 fixtures = [
-    "Custom Field"
+    {
+        "dt":
+            "Custom Field",
+            "filters":[[
+                "name",
+                "in",
+                {
+                    "Stock Entry-custom_subcontracting_id",
+                    "Purchase Order-custom_subcontracting_id"
+
+                },    
+            ]]
+    }
 ]
