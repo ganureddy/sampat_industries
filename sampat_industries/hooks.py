@@ -244,7 +244,8 @@ fixtures = [
                 {
                     "Stock Entry-custom_subcontracting_id",
                     "Purchase Order-custom_subcontracting_id",
-                    "Stock Entry-custom_supplier_id"
+                    "Stock Entry-custom_supplier_id",
+                    "Stock Entry-custom_address"
 
                 },    
             ]]
