@@ -254,7 +254,8 @@ fixtures = [
                     "Stock Entry-custom_address",
                     "Stock Entry-custom_fg_item",
                     "Stock Entry-custom_total_weight",
-                    "Stock Entry-custom_item_name"
+                    "Stock Entry-custom_item_name",
+                    "Supplier-custom_supplier_warehouse"
 
                 },    
             ]]
