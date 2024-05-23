@@ -110,3 +110,16 @@ function update_supplier_child(frm, data) {
     }
     frm.refresh_field('supplied_items');
 }
+
+frappe.ui.form.on('Subcontract Item Table', {
+	"qty": function(frm, cdt, cdn) {
+        let item = locals[cdt][cdn];
+        item.amount = item.rate * item.qty;
+        cur_frm.refresh_fields();
+    },
+    "rate": function(frm, cdt, cdn) {
+        let item = locals[cdt][cdn];
+        item.amount = item.rate * item.qty;
+        cur_frm.refresh_fields();
+    }
+})

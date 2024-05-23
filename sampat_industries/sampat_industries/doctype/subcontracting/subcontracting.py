@@ -67,6 +67,7 @@ def create_stock_entry(data,subcontracting_id,purpose):
             stock_entry.custom_total_weight = subcontracting.total_weight
             stock_entry.fg_completed_qty = each.get("qty")
             stock_entry.stock_entry_type = purpose
+            stock_entry.custom_item_value = each.get("amount")
 
 
             stock_entry.from_warehouse = subcontracting.set_reserve_warehouse
