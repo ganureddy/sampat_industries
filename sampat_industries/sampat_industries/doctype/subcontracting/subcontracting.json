@@ -9,6 +9,7 @@
   "section_break_penp",
   "naming_series",
   "supplier",
+  "supplier_gstn",
   "supplier_name",
   "supplier_warehouse",
   "po_created",
@@ -20,6 +21,11 @@
   "required_by",
   "service_item",
   "amended_from",
+  "column_break_dffq",
+  "vehicle_no",
+  "vehicle_type",
+  "expected_delivery_in_days",
+  "nature_of_process",
   "address_and_contact_section",
   "supplier_address",
   "supplier_address_details",
@@ -211,6 +217,41 @@
    "fieldname": "material_returned",
    "fieldtype": "Check",
    "label": "Material Returned"
+  },
+  {
+   "fieldname": "column_break_dffq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "vehicle_no",
+   "fieldtype": "Link",
+   "label": "Vehicle No.",
+   "options": "Vehicle"
+  },
+  {
+   "depends_on": "vehicle_no",
+   "fetch_from": "vehicle_no.make",
+   "fieldname": "vehicle_type",
+   "fieldtype": "Data",
+   "label": "Vehicle Type"
+  },
+  {
+   "fetch_from": "supplier.gstin",
+   "fieldname": "supplier_gstn",
+   "fieldtype": "Data",
+   "label": "Supplier GSTIN / UIN"
+  },
+  {
+   "fieldname": "expected_delivery_in_days",
+   "fieldtype": "Data",
+   "label": "Expected Delivery in Days",
+   "options": "\n"
+  },
+  {
+   "fieldname": "nature_of_process",
+   "fieldtype": "Link",
+   "label": "Nature of Process",
+   "options": "Operation"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -225,7 +266,7 @@
    "link_fieldname": "custom_subcontracting_id"
   }
  ],
- "modified": "2024-05-19 20:07:49.791530",
+ "modified": "2024-05-24 13:39:03.646248",
  "modified_by": "Administrator",
  "module": "Sampat Industries",
  "name": "Subcontracting",
