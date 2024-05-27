@@ -265,7 +265,15 @@ fixtures = [
                     "Item-custom_gross_weight",
                     "Item-custom_net_weight",
                     "Item-custom_yield_per_sheet",
-                    "Item-custom_no_of_cavity_per_strip"
+                    "Item-custom_no_of_cavity_per_strip",
+                    "Item-custom_column_break_xzyrp",
+                    "Item-custom_item_details",
+                    "Item Customer Detail-custom_item_description_",
+                    "Item Customer Detail-custom_drg_no",
+                    "Item Customer Detail-custom_erp_code",
+                    "Item Customer Detail-custom_part_no",
+                    "Item Customer Detail-custom_drg_document"
+
                 },    
             ]]
     }
