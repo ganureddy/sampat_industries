@@ -259,7 +259,7 @@ fixtures = [
                     "Stock Entry-custom_item_value",
                     "Stock Entry-custom_expected_return_date",
                     "Item-custom_raw_malarials",
-                    "Item-custom_gross_weight",
+                    "Item-custom_strip_width",
                     "Item-custom_strip_thickness",
                     "Item-custom_rm_type",
                     "Item-custom_gross_weight",
