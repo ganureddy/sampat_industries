@@ -257,8 +257,15 @@ fixtures = [
                     "Stock Entry-custom_item_name",
                     "Supplier-custom_supplier_warehouse",
                     "Stock Entry-custom_item_value",
-                    "Stock Entry-custom_expected_return_date"
-
+                    "Stock Entry-custom_expected_return_date",
+                    "Item-custom_raw_malarials",
+                    "Item-custom_gross_weight",
+                    "Item-custom_strip_thickness",
+                    "Item-custom_rm_type",
+                    "Item-custom_gross_weight",
+                    "Item-custom_net_weight",
+                    "Item-custom_yield_per_sheet",
+                    "Item-custom_no_of_cavity_per_strip"
                 },    
             ]]
     }
