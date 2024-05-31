@@ -34,6 +34,7 @@ def get_bom_details(data):
                     "reserve_warehouse": reserve_warehouse,
                     "required_qty": each_item.get("qty") * actual_qty,
                     "stock_uom":each_item.get("stock_uom"),
+                    "custom_bom_uom":each_item.get("uom"),
                 }
                 )
     
