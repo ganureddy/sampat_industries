@@ -24,10 +24,10 @@ frappe.ui.form.on("Internal Money Transfer", {
     });
   },
 
-  onload: function (frm) {
-    // Set the date field to today's date
-    frm.set_value("date", frappe.datetime.nowdate());
-  },
+  // onload: function (frm) {
+  //   // Set the date field to today's date
+  //   frm.set_value("date", frappe.datetime.nowdate());
+  // },
 
   type: function (frm) {
     // Map user and account
