@@ -65,6 +65,7 @@ def create_stock_entry(data,subcontracting_id,purpose):
             stock_entry.bom_no = each.get("bom")
             stock_entry.custom_fg_item = each.get("item_code")
             stock_entry.custom_total_weight = subcontracting.total_weight
+            stock_entry.supplier = subcontracting.supplier
             stock_entry.fg_completed_qty = each.get("qty")
             stock_entry.stock_entry_type = purpose
             stock_entry.custom_item_value = each.get("amount")

@@ -272,7 +272,8 @@ fixtures = [
                     "Item Customer Detail-custom_drg_no",
                     "Item Customer Detail-custom_erp_code",
                     "Item Customer Detail-custom_part_no",
-                    "Item Customer Detail-custom_drg_document"
+                    "Item Customer Detail-custom_drg_document",
+                    "Subcontracting Order Supplied Item-custom_bom_uom"
 
                 },    
             ]]
