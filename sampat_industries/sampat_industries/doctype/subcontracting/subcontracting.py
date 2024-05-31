@@ -34,7 +34,7 @@ def get_bom_details(data):
                     "reserve_warehouse": reserve_warehouse,
                     "required_qty": each_item.get("qty") * actual_qty,
                     "stock_uom":each_item.get("stock_uom"),
-                    "custom_bom_uom":each_item.get("uom"),
+                    "custom_bom_uom":each_item.get("uom")
                 }
                 )
     
@@ -68,6 +68,7 @@ def create_stock_entry(data,subcontracting_id,purpose):
             stock_entry.custom_total_weight = subcontracting.total_weight
             stock_entry.supplier = subcontracting.supplier
             stock_entry.fg_completed_qty = each.get("qty")
+            stock_entry.custom_transaction_type_ = "inward"
             stock_entry.stock_entry_type = purpose
             stock_entry.custom_item_value = each.get("amount")
 

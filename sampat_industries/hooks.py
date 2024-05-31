@@ -276,7 +276,10 @@ fixtures = [
                     "Subcontracting Order Supplied Item-custom_bom_uom",
                     "Stock Entry Detail-custom_hsnsac",
                     "Subcontracting Order Supplied Item-custom_hsnsac",
-                    "Stock Entry Detail-custom_subcontracting_uom"
+                    "Stock Entry Detail-custom_subcontracting_uom",
+                    "Subcontracting Order Supplied Item-custom_bom_unit",
+                    "Stock Entry-custom_party_delivery_number",
+                    "Stock Entry-custom_transaction_type_"
 
                 },    
             ]]
