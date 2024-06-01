@@ -1,0 +1,135 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"jheAJr9Wt8\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Subcontracting Process</span>\",\"col\":12}},{\"id\":\"IjVBNSTX17\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Subcontracting Entry\",\"col\":3}},{\"id\":\"pGZVpWs2A_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Delivery Challan\",\"col\":3}},{\"id\":\"Jo40Yjz-O8\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Inward\",\"col\":3}},{\"id\":\"StE4Nyyh5A\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"ITC-04\",\"col\":3}},{\"id\":\"e6BEBlUhmY\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"hToNj9N1kA\",\"type\":\"card\",\"data\":{\"card_name\":\"Item details\",\"col\":4}},{\"id\":\"WfUWegqIGU\",\"type\":\"card\",\"data\":{\"card_name\":\"Subcontractor Details\",\"col\":4}}]",
+ "creation": "2024-06-01 15:36:05.558612",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "branch",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Subcontracting Process",
+ "links": [
+  {
+   "description": "<h3>Item Details</h3>",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item details",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item Group",
+   "link_count": 0,
+   "link_to": "Item Group",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "UOM",
+   "link_count": 0,
+   "link_to": "UOM",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "description": "<h3>Subcontractor Details</h3>",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subcontractor Details",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subcontractor",
+   "link_count": 0,
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Subcontractor Group",
+   "link_count": 0,
+   "link_to": "Supplier Group",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-06-01 16:09:19.251524",
+ "modified_by": "Administrator",
+ "module": "Sampat Industries",
+ "name": "Subcontracting Process",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "format": "{} Out ",
+   "label": "Delivery Challan",
+   "link_to": "Stock Entry",
+   "stats_filter": "[[\"Stock Entry\",\"stock_entry_type\",\"=\",\"Send to Subcontractor\",false],[\"Stock Entry\",\"docstatus\",\"=\",\"1\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "format": "{} In",
+   "label": "Inward",
+   "link_to": "Stock Entry",
+   "stats_filter": "[[\"Stock Entry\",\"custom_subcontracting_id\",\"is\",\"set\",false],[\"Stock Entry\",\"stock_entry_type\",\"=\",\"Material Receipt\",false],[\"Stock Entry\",\"docstatus\",\"=\",\"1\",false]]",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "format": "{} Open",
+   "label": "Subcontracting Entry",
+   "link_to": "Subcontracting",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "ITC-04",
+   "link_to": "ITC-04",
+   "type": "Report"
+  }
+ ],
+ "title": "Subcontracting Process"
+}

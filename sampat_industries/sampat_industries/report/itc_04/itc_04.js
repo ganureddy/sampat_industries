@@ -34,6 +34,13 @@ frappe.query_reports["ITC-04"] = {
 			options: "Subcontracting",
 			width: "60px",
 		},
+		{
+			fieldname: "custom_transaction_type_",
+			label: __("Transaction Type"),
+			fieldtype: "Select",
+			options: "\nInward\nOutward",
+			width: "60px",
+		},
 		
 	]
 };

@@ -10,11 +10,13 @@
   "item_name",
   "rate",
   "amount",
+  "uom",
   "column_break_vdsi",
   "bom",
   "qty",
   "returned_qty",
-  "pending_qty"
+  "pending_qty",
+  "reference_dc"
  ],
  "fields": [
   {
@@ -78,12 +80,27 @@
    "fieldname": "pending_qty",
    "fieldtype": "Float",
    "label": "Pending Qty"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "reference_dc",
+   "fieldtype": "Link",
+   "label": "Reference DC",
+   "options": "Stock Entry"
+  },
+  {
+   "fetch_from": "item_code.stock_uom",
+   "fetch_if_empty": 1,
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-05-23 12:20:47.295748",
+ "modified": "2024-06-01 18:12:01.569059",
  "modified_by": "Administrator",
  "module": "Sampat Industries",
  "name": "Subcontract Item Table",

@@ -31,7 +31,9 @@ def get_data(filters):
 			se.posting_date,
 			sub_ci.qty,
 			sub_ci.amount,
-
+			se.custom_transaction_type_,
+			sub.nature_of_process,
+			sub_ci.uom
 		)
 	)
 	
@@ -44,6 +46,9 @@ def get_data(filters):
 
 	if filters.get("subcontracting_id"):
 		query =  query.where(se.custom_subcontracting_id == filters.get("subcontracting_id"))
+	
+	if filters.get("custom_transaction_type_"):
+		query = query.where(se.custom_transaction_type_ == filters.get("custom_transaction_type_"))
 		
 	data = query.run(as_dict=True)
 
@@ -51,11 +56,17 @@ def get_data(filters):
 
 def get_colunm(filters):
 	columns = [
+		# {
+		# 	"fieldname": "stock_entry",
+		# 	"fieldtype": "Link",
+		# 	"label": _("Stock Entry"),
+		# 	"options": "Stock Entry",
+		# 	"width": 140
+		# },
 		{
-			"fieldname": "stock_entry",
-			"fieldtype": "Link",
-			"label": _("DC Number"),
-			"options": "Stock Entry",
+			"fieldname": "posting_date",
+			"fieldtype": "Date",
+			"label": _("DC Date"),
 			"width": 140
 		},
 		{
@@ -78,12 +89,7 @@ def get_colunm(filters):
 			"label": _("Subcontracting ID"),
 			"width": 140
 		},
-		{
-			"fieldname": "posting_date",
-			"fieldtype": "Date",
-			"label": _("DC Date"),
-			"width": 140
-		},
+
 		# {
 		# 	"fieldname": "input_type",
 		# 	"fieldtype": "Data",
@@ -98,6 +104,12 @@ def get_colunm(filters):
 			"width": 140
 		},
 		{
+			"fieldname": "uom",
+			"fieldtype": "Data",
+			"label": _("UOM"),
+			"width": 140
+		},
+		{
 			"fieldname": "qty",
 			"fieldtype": "Float",
 			"label": _("Qty"),
@@ -106,9 +118,20 @@ def get_colunm(filters):
 		{
 			"fieldname": "amount",
 			"fieldtype": "Currency",
-			"label": _("AMount"),
+			"label": _("Amount"),
 			"width": 140
 		},
-		
+		{
+			"fieldname": "nature_of_process",
+			"fieldtype": "Data",
+			"label": _("Nature of Process"),
+			"width": 140
+		},
+		{
+			"fieldname": "custom_transaction_type_",
+			"fieldtype": "Data",
+			"label": _("Transaction Type"),
+			"width": 140
+		},
 	]
 	return columns

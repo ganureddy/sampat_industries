@@ -68,7 +68,7 @@ def create_stock_entry(data,subcontracting_id,purpose):
             stock_entry.custom_total_weight = subcontracting.total_weight
             stock_entry.supplier = subcontracting.supplier
             stock_entry.fg_completed_qty = each.get("qty")
-            stock_entry.custom_transaction_type_ = "inward"
+            stock_entry.custom_transaction_type_ = "Outward"
             stock_entry.stock_entry_type = purpose
             stock_entry.custom_item_value = each.get("amount")
 
@@ -138,6 +138,7 @@ def create_stock_entry_as_return(data,subcontracting_id,purpose):
             stock_entry.custom_subcontracting_id = subcontracting_id
             stock_entry.company = subcontracting.company
             stock_entry.stock_entry_type = purpose
+            stock_entry.custom_transaction_type_ = "Inward"
             
             if each.get("returned_qty") == 0 and each.get("pending_qty") == 0:   
                 stock_entry.append("items", {
@@ -181,6 +182,8 @@ def update_check_of_stock_entry_created(doc,method=None):
     if doc.custom_subcontracting_id and doc.purpose == "Send to Subcontractor":
         subcontracting = frappe.get_doc("Subcontracting", doc.custom_subcontracting_id)
         subcontracting.stock_entry_created = 1
+        for each_item_id in subcontracting.get("subcontracted_item", []):
+            each_item_id.update({"reference_dc":doc.name})
         subcontracting.save(ignore_permissions=True)
         
     if doc.custom_subcontracting_id and doc.purpose == "Material Receipt":

@@ -244,6 +244,7 @@
    "label": "Supplier GSTIN / UIN"
   },
   {
+   "default": "30",
    "fieldname": "expected_delivery_in_days",
    "fieldtype": "Data",
    "label": "Expected Delivery in Days",
@@ -278,7 +279,7 @@
    "link_fieldname": "custom_subcontracting_id"
   }
  ],
- "modified": "2024-06-01 15:26:56.121535",
+ "modified": "2024-06-01 18:06:05.092787",
  "modified_by": "Administrator",
  "module": "Sampat Industries",
  "name": "Subcontracting",
