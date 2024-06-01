@@ -26,6 +26,8 @@
   "vehicle_type",
   "expected_delivery_in_days",
   "nature_of_process",
+  "vehicle_driver_name",
+  "driver_mobile_no",
   "address_and_contact_section",
   "supplier_address",
   "supplier_address_details",
@@ -252,6 +254,16 @@
    "fieldtype": "Link",
    "label": "Nature of Process",
    "options": "Operation"
+  },
+  {
+   "fieldname": "vehicle_driver_name",
+   "fieldtype": "Data",
+   "label": "Vehicle Driver Name"
+  },
+  {
+   "fieldname": "driver_mobile_no",
+   "fieldtype": "Data",
+   "label": "Driver Mobile No."
   }
  ],
  "index_web_pages_for_search": 1,
@@ -266,7 +278,7 @@
    "link_fieldname": "custom_subcontracting_id"
   }
  ],
- "modified": "2024-05-24 13:39:03.646248",
+ "modified": "2024-06-01 15:26:56.121535",
  "modified_by": "Administrator",
  "module": "Sampat Industries",
  "name": "Subcontracting",
