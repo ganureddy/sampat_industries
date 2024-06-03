@@ -279,7 +279,11 @@ fixtures = [
                     "Stock Entry Detail-custom_subcontracting_uom",
                     "Subcontracting Order Supplied Item-custom_bom_unit",
                     "Stock Entry-custom_party_delivery_number",
-                    "Stock Entry-custom_transaction_type_"
+                    "Stock Entry-custom_transaction_type_",
+                    "Purchase Receipt-custom_supplier_invoice",
+                    "Purchase Receipt-custom_supplier_invoice_no",
+                    "Purchase Receipt-custom_column_break_mnnoh",
+                    "Purchase Receipt-custom_supplier_invoice_date"
 
                 },    
             ]]
