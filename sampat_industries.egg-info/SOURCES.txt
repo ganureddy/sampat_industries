@@ -24,6 +24,7 @@ sampat_industries/public/js/doctype_plugin/salary_slip/salary_slip.js
 sampat_industries/public/js/doctype_plugin/salary_slip/salary_slip.py
 sampat_industries/public/js/doctype_plugin/stock_entry/stock_entry.js
 sampat_industries/sampat_industries/__init__.py
+sampat_industries/sampat_industries/curd_event.py
 sampat_industries/sampat_industries/custom/employee.json
 sampat_industries/sampat_industries/custom/stock_entry_detail.json
 sampat_industries/sampat_industries/doctype/__init__.py
@@ -170,6 +171,10 @@ sampat_industries/sampat_industries/report/daily_attendance_report/__init__.py
 sampat_industries/sampat_industries/report/daily_attendance_report/daily_attendance_report.js
 sampat_industries/sampat_industries/report/daily_attendance_report/daily_attendance_report.json
 sampat_industries/sampat_industries/report/daily_attendance_report/daily_attendance_report.py
+sampat_industries/sampat_industries/report/itc_04/__init__.py
+sampat_industries/sampat_industries/report/itc_04/itc_04.js
+sampat_industries/sampat_industries/report/itc_04/itc_04.json
+sampat_industries/sampat_industries/report/itc_04/itc_04.py
 sampat_industries/sampat_industries/report/production_sheet_report/__init__.py
 sampat_industries/sampat_industries/report/production_sheet_report/production_sheet_report.js
 sampat_industries/sampat_industries/report/production_sheet_report/production_sheet_report.json
@@ -216,6 +221,7 @@ sampat_industries/sampat_industries/web_form/production_entry_sheet/production_e
 sampat_industries/sampat_industries/web_form/production_entry_sheet/production_entry_sheet.json
 sampat_industries/sampat_industries/web_form/production_entry_sheet/production_entry_sheet.py
 sampat_industries/sampat_industries/workspace/sampat_industries/sampat_industries.json
+sampat_industries/sampat_industries/workspace/subcontracting_process/subcontracting_process.json
 sampat_industries/templates/__init__.py
 sampat_industries/templates/pages/__init__.py
 sampat_industries/www/__init__.py

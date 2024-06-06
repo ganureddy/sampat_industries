@@ -283,7 +283,8 @@ fixtures = [
                     "Purchase Receipt-custom_supplier_invoice",
                     "Purchase Receipt-custom_supplier_invoice_no",
                     "Purchase Receipt-custom_column_break_mnnoh",
-                    "Purchase Receipt-custom_supplier_invoice_date"
+                    "Purchase Receipt-custom_supplier_invoice_date",
+                    "Purchase Receipt-custom_entered_in_tally__"
 
                 },    
             ]]
