@@ -147,9 +147,12 @@ doc_events = {
     },
     "Stock Entry":{
         "on_submit":"sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.update_check_of_stock_entry_created"
+    },
+    "Yearly Increment Entry":{
+        "on_submit":"sampat_industries.curd_event.update_employee_salary"
     }
-}
 
+}
 # Scheduled Tasks
 # ---------------
 
@@ -284,7 +287,8 @@ fixtures = [
                     "Purchase Receipt-custom_supplier_invoice_no",
                     "Purchase Receipt-custom_column_break_mnnoh",
                     "Purchase Receipt-custom_supplier_invoice_date",
-                    "Purchase Receipt-custom_entered_in_tally__"
+                    "Purchase Receipt-custom_entered_in_tally__",
+                    "Stock Entry-custom_uom"
 
                 },    
             ]]
