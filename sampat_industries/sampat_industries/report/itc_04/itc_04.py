@@ -30,6 +30,8 @@ def get_data(filters):
 			sub.supplier_gstn,
 			se.posting_date,
 			sub_ci.qty,
+			sub_ci.returned_qty,
+			sub_ci.pending_qty,
 			sub_ci.amount,
 			se.custom_transaction_type_,
 			sub.nature_of_process,
@@ -56,13 +58,13 @@ def get_data(filters):
 
 def get_colunm(filters):
 	columns = [
-		# {
-		# 	"fieldname": "stock_entry",
-		# 	"fieldtype": "Link",
-		# 	"label": _("Stock Entry"),
-		# 	"options": "Stock Entry",
-		# 	"width": 140
-		# },
+		{
+			"fieldname": "stock_entry",
+			"fieldtype": "Link",
+			"label": _("Stock Entry"),
+			"options": "Stock Entry",
+			"width": 140
+		},
 		{
 			"fieldname": "posting_date",
 			"fieldtype": "Date",
@@ -113,6 +115,18 @@ def get_colunm(filters):
 			"fieldname": "qty",
 			"fieldtype": "Float",
 			"label": _("Qty"),
+			"width": 140
+		},
+		{
+			"fieldname": "returned_qty",
+			"fieldtype": "Float",
+			"label": _("Returned Qty"),
+			"width": 140
+		},
+				{
+			"fieldname": "pending_qty",
+			"fieldtype": "Float",
+			"label": _("Balanced Qty"),
 			"width": 140
 		},
 		{
