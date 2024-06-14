@@ -59,11 +59,11 @@ def get_data(filters):
 def get_colunm(filters):
 	columns = [
 		{
-			"fieldname": "DC Challan",
+			"fieldname": "stock_entry",
 			"fieldtype": "Link",
-			"label": _("Stock Entry"),
+			"label": _("DC Challan No."),
 			"options": "Stock Entry",
-			"width": 140
+			"width": 160
 		},
 		{
 			"fieldname": "posting_date",
