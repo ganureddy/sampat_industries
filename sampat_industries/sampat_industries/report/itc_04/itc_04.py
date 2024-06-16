@@ -35,8 +35,13 @@ def get_data(filters):
 			sub_ci.amount,
 			se.custom_transaction_type_,
 			sub.nature_of_process,
-			sub_ci.uom
+			sub_ci.uom,
+			se.custom_fg_item,
+			se.custom_total_weight,
+			se.custom_item_value,
+			se.custom_uom
 		)
+		.where(se.docstatus == 1)
 	)
 	
 	if filters.get("from_date"):
@@ -100,19 +105,19 @@ def get_colunm(filters):
 		# 	"width": 140
 		# },
 		{
-			"fieldname": "item_code",
+			"fieldname": "custom_fg_item",
 			"fieldtype": "Data",
 			"label": _("Item Code"),
 			"width": 140
 		},
 		{
-			"fieldname": "uom",
+			"fieldname": "custom_uom",
 			"fieldtype": "Data",
 			"label": _("UOM"),
 			"width": 140
 		},
 		{
-			"fieldname": "qty",
+			"fieldname": "custom_total_weight",
 			"fieldtype": "Float",
 			"label": _("Qty"),
 			"width": 140
@@ -130,7 +135,7 @@ def get_colunm(filters):
 			"width": 140
 		},
 		{
-			"fieldname": "amount",
+			"fieldname": "custom_item_value",
 			"fieldtype": "Currency",
 			"label": _("Amount"),
 			"width": 140
