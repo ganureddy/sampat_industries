@@ -71,6 +71,7 @@ def create_stock_entry(data,subcontracting_id,purpose):
             stock_entry.custom_transaction_type_ = "Outward"
             stock_entry.stock_entry_type = purpose
             stock_entry.custom_item_value = each.get("amount")
+            stock_entry.custom_expected_return_date = subcontracting.required_by
 
 
             stock_entry.from_warehouse = subcontracting.set_reserve_warehouse
