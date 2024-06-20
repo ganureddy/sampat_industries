@@ -277,6 +277,7 @@ fixtures = [
                     "Item Customer Detail-custom_part_no",
                     "Item Customer Detail-custom_drg_document",
                     "Subcontracting Order Supplied Item-custom_bom_uom",
+                    "Subcontracting Order Supplied Item-custom_bom_qty",
                     "Stock Entry Detail-custom_hsnsac",
                     "Subcontracting Order Supplied Item-custom_hsnsac",
                     "Stock Entry Detail-custom_subcontracting_uom",

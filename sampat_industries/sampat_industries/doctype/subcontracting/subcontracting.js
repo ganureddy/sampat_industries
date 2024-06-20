@@ -107,6 +107,8 @@ function update_supplier_child(frm, data) {
         child.reserve_warehouse = items[index]['reserve_warehouse'];
         child.required_qty = items[index]['required_qty'];
         child.stock_uom = items[index]['stock_uom'];
+        child.custom_bom_uom = items[index]['custom_bom_uom'];
+        child.custom_bom_qty = items[index]['custom_bom_qty'];
     }
     frm.refresh_field('supplied_items');
 }

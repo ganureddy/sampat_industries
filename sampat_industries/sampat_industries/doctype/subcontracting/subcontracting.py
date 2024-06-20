@@ -33,12 +33,14 @@ def get_bom_details(data):
                     "bom_detail_no":each_item.get("parent"),
                     "reserve_warehouse": reserve_warehouse,
                     "required_qty": each_item.get("qty") * actual_qty,
+                    "custom_bom_qty": each_item.get("stock_qty"),
                     "stock_uom":each_item.get("stock_uom"),
-                    "custom_bom_uom":each_item.get("uom")
+                    "custom_bom_uom":each_item.get("uom"),
                 }
                 )
     
                 raw_materials.append(args)
+                print(args, "55555555555555555555555555555555")
                 
         return raw_materials
 
