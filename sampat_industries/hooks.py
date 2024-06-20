@@ -146,7 +146,8 @@ doc_events = {
         "on_submit":"sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.update_check_of_po_created"
     },
     "Stock Entry":{
-        "on_submit":"sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.update_check_of_stock_entry_created"
+        "on_submit":"sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.update_check_of_stock_entry_created",
+        # "on_cancel":"sampat_industries.sampat_industries.doctype.subcontracting.subcontracting.on_cancle_update_record"
     },
     "Yearly Increment Entry":{
         "on_submit":"sampat_industries.curd_event.update_employee_salary"

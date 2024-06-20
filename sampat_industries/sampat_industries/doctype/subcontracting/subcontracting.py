@@ -179,14 +179,21 @@ def update_check_of_po_created(doc,method=None):
         subcontracting.po_created = 1
         subcontracting.save(ignore_permissions=True)
 
+# def on_cancle_update_record(doc, method=None):
+#     if doc.custom_subcontracting_id and doc.purpose == "Send to Subcontractor":
+#         subcontracting_id = frappe.get_doc("Subcontracting", doc.custom_subcontracting_id)
+#         subcontracting_id.stock_entry_created = 0
+#         for each_item_id in subcontracting_id.get("subcontracted_item", []):
+#             each_item_id.update({"reference_dc": ''})
+#         subcontracting_id.save(ignore_permissions=True)
 
 def update_check_of_stock_entry_created(doc,method=None):
     
     if doc.custom_subcontracting_id and doc.purpose == "Send to Subcontractor":
         subcontracting = frappe.get_doc("Subcontracting", doc.custom_subcontracting_id)
         subcontracting.stock_entry_created = 1
-        for each_item_id in subcontracting.get("subcontracted_item", []):
-            each_item_id.update({"reference_dc":doc.name})
+        # for each_item_id in subcontracting.get("subcontracted_item", []):
+        #     each_item_id.update({"reference_dc":doc.name})
         subcontracting.save(ignore_permissions=True)
         
     if doc.custom_subcontracting_id and doc.purpose == "Material Receipt":
