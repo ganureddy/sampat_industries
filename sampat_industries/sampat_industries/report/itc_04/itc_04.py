@@ -118,7 +118,7 @@ def get_colunm(filters):
 			"width": 140
 		},
 		{
-			"fieldname": "custom_total_amount_itc_04",
+			"fieldname": "custom_total_weight",
 			"fieldtype": "Float",
 			"label": _("Qty"),
 			"width": 140
@@ -136,7 +136,7 @@ def get_colunm(filters):
 			"width": 140
 		},
 		{
-			"fieldname": "custom_item_value",
+			"fieldname": "custom_total_amount_itc_04",
 			"fieldtype": "Currency",
 			"label": _("Amount"),
 			"width": 140
