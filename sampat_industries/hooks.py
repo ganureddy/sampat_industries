@@ -295,7 +295,8 @@ fixtures = [
                     "Item-custom_job_work",
                     "Item-custom_itc_04_value",
                     "Item-custom_column_break_junu5",
-                    "Item-custom_itc_04_uom"
+                    "Item-custom_itc_04_uom",
+                    "Stock Entry-custom_total_amount_itc_04"
                 },    
             ]]
     }
