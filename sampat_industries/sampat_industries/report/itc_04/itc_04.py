@@ -39,7 +39,8 @@ def get_data(filters):
 			se.custom_fg_item,
 			se.custom_total_weight,
 			se.custom_item_value,
-			se.custom_uom
+			se.custom_uom,
+			se.custom_total_amount_itc_04
 		)
 		.where(se.docstatus == 1)
 	)
@@ -117,7 +118,7 @@ def get_colunm(filters):
 			"width": 140
 		},
 		{
-			"fieldname": "custom_total_weight",
+			"fieldname": "custom_total_amount_itc_04",
 			"fieldtype": "Float",
 			"label": _("Qty"),
 			"width": 140
