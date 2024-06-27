@@ -136,6 +136,12 @@ def get_colunm(filters):
 			"width": 140
 		},
 		{
+			"fieldname": "custom_item_value",
+			"fieldtype": "Currency",
+			"label": _("Rate"),
+			"width": 120
+		},
+		{
 			"fieldname": "custom_total_amount_itc_04",
 			"fieldtype": "Currency",
 			"label": _("Amount"),
