@@ -42,7 +42,7 @@
       </tr>
     </tbody>
 
-    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float %}
+    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float + employee_salary.additions|float %}
     {% endif %} {%endif%}
     <!-- End For loop -->
     {% endfor %}
@@ -95,7 +95,7 @@
       </tr>
     </tbody>
 
-    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float %}
+    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float + employee_salary.additions|float %}
     {% endif %} {%endif%}
     <!-- End For loop -->
     {% endfor %}
@@ -148,7 +148,7 @@
       </tr>
     </tbody>
 
-    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float %}
+    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float + employee_salary.additions|float %}
     {% endif %} {%endif%}
     <!-- End For loop -->
     {% endfor %}
@@ -200,7 +200,7 @@
       </tr>
     </tbody>
 
-    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float %}
+    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float + employee_salary.additions|float %}
     {% endif %} {%endif%}
     <!-- End For loop -->
     {% endfor %}
@@ -253,7 +253,7 @@
       </tr>
     </tbody>
 
-    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float %}
+    {% set ta.total_amount = ta.total_amount + employee_salary.net_pay|float + employee_salary.additions|float %}
     {% endif %} {%endif%}
     <!-- End For loop -->
     {% endfor %}
